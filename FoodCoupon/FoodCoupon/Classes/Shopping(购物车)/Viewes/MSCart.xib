@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MSCartView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQq-73-Vb9">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="260" id="jvu-Cd-EVT"/>
+                        <constraint firstAttribute="height" constant="260" id="nJa-oa-k3C"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI0-bj-75s">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="MVD-EC-tMk"/>
+                    </constraints>
+                    <state key="normal" title="去逛逛">
+                        <color key="titleColor" red="1" green="0.24313725490196078" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="1" green="0.24313725489999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="goshoppingAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Jfv-7G-y2b"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nI0-bj-75s" secondAttribute="trailing" constant="100" id="6L3-bX-u6s"/>
+                <constraint firstItem="nI0-bj-75s" firstAttribute="top" secondItem="LQq-73-Vb9" secondAttribute="bottom" constant="10" id="6QA-t1-7BE"/>
+                <constraint firstItem="LQq-73-Vb9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PQ3-w4-EIv"/>
+                <constraint firstItem="LQq-73-Vb9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-40" id="hMQ-Jw-Khv"/>
+                <constraint firstItem="nI0-bj-75s" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="uaA-99-Xkz"/>
+            </constraints>
+            <connections>
+                <outlet property="gifImageView" destination="LQq-73-Vb9" id="QA8-EO-1YS"/>
+            </connections>
+        </view>
+    </objects>
+</document>

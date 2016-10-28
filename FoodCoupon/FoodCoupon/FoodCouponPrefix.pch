@@ -1,0 +1,28 @@
+//
+//  FoodCouponPrefix.pch
+//  FoodCoupon
+//
+//  Created by apple on 16/10/17.
+//  Copyright © 2016年 Lingser. All rights reserved.
+//
+
+#ifndef FoodCouponPrefix_pch
+#define FoodCouponPrefix_pch
+
+//当编译模式为release 时屏蔽NSLog(...)
+#ifdef DEBUG
+#else
+#define NSLog(...)
+
+#endif
+
+//所有的类目
+#import "CategoryHeader.h"
+
+//所有的宏
+#import "GlobalMarc.h"
+
+#import "XSHUDView.h"
+
+
+#endif /* FoodCouponPrefix_pch */

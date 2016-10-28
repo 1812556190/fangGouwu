@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MSGoodsPrice">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZw-PY-nTH">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="TxD-9l-ZIF"/>
+                        <constraint firstAttribute="width" constant="22" id="vqa-9S-Xww"/>
+                    </constraints>
+                    <state key="normal" image="checkbox_selected"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总计￥201" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNI-4a-B1R">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="K3x-lF-Sbl"/>
+                        <constraint firstAttribute="width" constant="150" id="iiF-P2-8u7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T0-gF-Kln">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="LrG-8J-GZO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="409-Ef-w2t">
+                    <color key="backgroundColor" red="1" green="0.24313725490196078" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="ejf-Gs-WES"/>
+                    </constraints>
+                    <state key="normal" title="去结算">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="settlementBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="HGF-38-YdD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DNI-4a-B1R" firstAttribute="leading" secondItem="6T0-gF-Kln" secondAttribute="trailing" id="2od-Jq-kyh"/>
+                <constraint firstItem="DNI-4a-B1R" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9jP-Uv-sli"/>
+                <constraint firstAttribute="trailing" secondItem="409-Ef-w2t" secondAttribute="trailing" id="ApL-Fi-Odk"/>
+                <constraint firstAttribute="bottom" secondItem="409-Ef-w2t" secondAttribute="bottom" id="ApW-EJ-Ntp"/>
+                <constraint firstItem="409-Ef-w2t" firstAttribute="leading" secondItem="DNI-4a-B1R" secondAttribute="trailing" constant="10" id="I43-Wr-Pti"/>
+                <constraint firstItem="wZw-PY-nTH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="KnS-wX-RMf"/>
+                <constraint firstItem="6T0-gF-Kln" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RwJ-e2-ezm"/>
+                <constraint firstItem="wZw-PY-nTH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Wfn-UC-lAt"/>
+                <constraint firstItem="409-Ef-w2t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cTQ-km-i8Y"/>
+                <constraint firstItem="6T0-gF-Kln" firstAttribute="leading" secondItem="wZw-PY-nTH" secondAttribute="trailing" constant="10" id="sbR-EZ-QYp"/>
+            </constraints>
+            <connections>
+                <outlet property="goodsName" destination="6T0-gF-Kln" id="RcJ-WW-XuY"/>
+                <outlet property="goodsPrice" destination="DNI-4a-B1R" id="QGB-Vf-pG1"/>
+                <outlet property="selectedBtnAction" destination="wZw-PY-nTH" id="Gzc-Er-25s"/>
+                <outlet property="settBtn" destination="409-Ef-w2t" id="rSI-fN-WzU"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkbox_selected" width="22" height="22"/>
+    </resources>
+</document>
